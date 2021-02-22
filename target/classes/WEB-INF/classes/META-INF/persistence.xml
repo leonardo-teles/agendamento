@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<persistence>
+    <persistence-unit name="agendamentoDS">
+		<jta-data-source>java:/agendamentoDS</jta-data-source>
+    </persistence-unit>
+</persistence>
