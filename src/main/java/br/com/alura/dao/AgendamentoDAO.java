@@ -17,4 +17,8 @@ public class AgendamentoDAO {
 	public List<Agendamento> listar() {
 		return em.createQuery("SELECT a FROM Agendamento a", Agendamento.class).getResultList();
 	}
+	
+	public void inserir(Agendamento agendamento) {
+		em.persist(agendamento);
+	}
 }
