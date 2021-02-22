@@ -21,4 +21,13 @@ public class AgendamentoDAO {
 	public void inserir(Agendamento agendamento) {
 		em.persist(agendamento);
 	}
+	
+	public List<Agendamento> listarPorNaoAgendado() {
+		return em.createQuery("SELECT a FROM Agendamento a WHERE a.agendado = false", Agendamento.class).getResultList();
+	}
+	
+	public void alterar(Agendamento agendamento) {
+		em.merge(agendamento);
+	}
+
 }
